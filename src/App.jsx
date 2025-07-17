@@ -21,6 +21,8 @@ export function App() {
 
   return (
     <main>
+      <h1>Interest Form</h1>
+      <h3>Fill this out for a brand-new, legendary air fryer!</h3>
       <form onSubmit={handleSubmit((data) => {
         console.log(data);
       })}>

@@ -21,11 +21,12 @@ export function App() {
 
   return (
     <main>
-      <h1>Interest Form</h1>
-      <h3>Fill this out for a brand-new, legendary air fryer!</h3>
       <form onSubmit={handleSubmit((data) => {
         console.log(data);
       })}>
+        <h1>Interest Form</h1>
+        <h3>Fill this out for a brand-new, legendary air fryer!</h3>
+
         <label>First Name
           <input {...register("firstName", { required: true })} placeholder="e.g. Peter" />
         </label>
@@ -47,7 +48,7 @@ export function App() {
               minLength: {value: SECRET_PIN_LENGTH, message: `Length is ${SECRET_PIN_LENGTH}`},
               maxLength: {value: SECRET_PIN_LENGTH, message: `Length is ${SECRET_PIN_LENGTH}`} })} placeholder="Your secret 16-digit code" />
         </label>
-        <input type="submit" />
+        <button type="submit">Submit</button>
       </form>
     </main>
   )

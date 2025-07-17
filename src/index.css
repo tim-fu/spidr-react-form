@@ -18,11 +18,14 @@ form * {
   align-items: center;
   -webkit-font-smoothing: subpixel-antialiased;
 }
+form > * {
+  /* border: 1px solid red; */
+  padding: 10px;
+}
 
 /* Form title */
 h1 {
-  font-size: 3.2em;
-  padding-bottom: 30px;
+  font-size: 2.5em;
 }
 h1::after {
   content: "";
@@ -32,15 +35,29 @@ h1::after {
   border-bottom: 2px solid white;
 }
 
-h3 {
-  padding-bottom: 20px;
+/* Form labels and fields */
+label {
+  font-weight: 400;
+  color: rgb(225, 225, 225);
+}
+input {
+  background-color: rgb(42, 42, 42);
+  color: rgb(200, 200, 200);
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  outline: 1px solid rgb(200, 200, 200, 0.6);
+  font-size: 1rem;
+}
+input:focus,
+input:focus-visible {
+  outline: auto 5px rgb(86, 172, 189);
 }
 
-/* Submit */
+/* Submit button */
 button {
   border: 1px solid white;
   padding: 0.6em 1.2em;
-  margin-top: 15px;
+  margin: 15px 0px;
   font-size: 1em;
   font-weight: 400;
   font-family: inherit;
@@ -56,16 +73,3 @@ button:focus,
 button:focus-visible {
   outline: auto 5px rgb(0, 95, 204);
 }
-
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */

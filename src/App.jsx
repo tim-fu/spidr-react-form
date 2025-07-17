@@ -48,7 +48,7 @@ export function App() {
               minLength: {value: SECRET_PIN_LENGTH, message: `Length is ${SECRET_PIN_LENGTH}`},
               maxLength: {value: SECRET_PIN_LENGTH, message: `Length is ${SECRET_PIN_LENGTH}`} })} placeholder="Your secret 16-digit code" />
         </label>
-        <button type="submit">Submit</button>
+        <div><button type="submit">Submit</button></div>
       </form>
     </main>
   )
